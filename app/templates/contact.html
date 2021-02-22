@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel ="stylesheet" type="text/css" href="{{url_for('static', filename='css/app.css')}}">
+{% endblock %}
+
+{% block main %}
+<h1>Contatc Form</h1>
+<hr>
+<p>Fill in this form to contact the site owners.</p>
+
+<form method ="post">
+{{form.csrf_token}}
+    <p>{{ form.name.label }}
+    <label id= 'Req'>(Required)</label>
+        <br>
+        Please enter your Full name
+        <br>
+        {{ form.name(size=20) }}        
+    </p><br>
+    
+    <p>{{ form.subject.label }}
+    <label id= 'Req'>(Required)</label>
+        
+        Please enter ypur e-mail address
+        <br>
+        {{ form.email(size=20) }}
+    
+    </p><br>
+    
+    <p>{{ form.subject.label }}
+    <label id= 'Req'>(Required)</label>
+        <br>
+    Please enter the subject of you message<br>
+        {{ form.subject(size=40) }}
+        
+    </p><br>
+    
+    <p>{{ form.message.label }}
+    <label id= 'Req'>(Required)</label>
+        <br>
+        Please enter the message you would like to send <br>
+        {{ form.message }}
+        
+    </p><br>
+    <button type="submit" class= "button">  Send</button>
+</form>
+{% endblock %}
