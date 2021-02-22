@@ -13,4 +13,5 @@ app.config['MAIL_USERNAME']= 'Enter your mailtrap username'
 app.config['MAIL_PASSWORD']= 'Enter your mailtrap password'
 
 mail = Mail(app)
+csrf.init_app(app)
 from app import views

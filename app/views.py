@@ -37,11 +37,8 @@ def contact():
             msg.body = contactform.message.data
             mail.send(msg)
             flash('Message sent Successfuly')
-
             return redirect(url_for('/')
-        flash_errors(Contactform)
-
-    return render_template('conatct.html', form=Contactform)
+    return render_template("contact.html", form=Contactform)
 
 
 ###

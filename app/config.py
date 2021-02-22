@@ -1,9 +1,4 @@
 import os
-set MAIL_SERVER ="smtp.mailtrap.io"
-set MAIL_PORT=465
-set MAIL_USERNAME="ee97be7d59de58"
-set MAIL_PASSWORD="a7e201ef4ebd3c"
-set SECRET_KEY="qwerty123"
 
 class Config(object):
     """Base Config Object""" 
